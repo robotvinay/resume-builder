@@ -40,7 +40,7 @@ export function Templates() {
   const setTemplate = useTemplates((state: any) => state.setTemplate);
 
   return (
-    <TemplateWrapper>
+    <TemplateWrapper id="template">
       {templates.map((_: any, ind: number) => (
         <TemplateThumbnail key={templatesName[ind]}>
           <TemplateThumbnailImg

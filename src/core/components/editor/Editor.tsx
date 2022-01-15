@@ -49,7 +49,7 @@ export const IntroEditor = () => {
   const update = useIntro((state: any) => state.update);
 
   return (
-    <Container>
+    <Container id="intro">
       <Heading>Intro</Heading>
       <IntroEdit state={introState} METADATA={INTRO_METADATA} update={update} />
       <Divider />
@@ -62,7 +62,7 @@ export const SocialEditor = () => {
   const updateProfiles = useIntro((state: any) => state.updateProfiles);
 
   return (
-    <Container>
+    <Container id="social">
       <Heading>Social</Heading>
       <SocialEdit state={profiles} METADATA={SOCIAL_METADATA} update={updateProfiles} />
     </Container>
@@ -70,7 +70,7 @@ export const SocialEditor = () => {
 };
 
 export const ActivitiesEditor = () => (
-  <Container>
+  <Container id="activities">
     <Heading>Activities</Heading>
     <ActivitiesEdit />
   </Container>
@@ -81,7 +81,7 @@ export const LabelsEditor = () => {
   const update = useLabels((state: any) => state.update);
 
   return (
-    <Container>
+    <Container id="label">
       <Heading>Template Labels</Heading>
       <LabelsEdit state={labelsState} update={update} />
     </Container>
@@ -96,7 +96,7 @@ export const EduEditor = () => {
   );
 
   return (
-    <Container>
+    <Container id="education">
       <Heading>Education</Heading>
       <TimelineEdit
         METADATA={EDU_METADATA}
@@ -116,7 +116,7 @@ export const ExerienceEditor = () => {
   );
 
   return (
-    <Container>
+    <Container id="experience">
       <Heading>Experience</Heading>
       <TimelineEdit
         METADATA={EXP_METADATA}
@@ -169,10 +169,10 @@ const AwardsEditor = () => {
 };
 
 export const ForteEditor = () => (
-  <>
+  <div id="awards">
     <AwardsEditor />
     <VolunteerEditor />
-  </>
+  </div>
 );
 
 export const SkillEditor = ({ type, hasRating = false }: { type: string; hasRating: boolean }) => {
@@ -199,7 +199,7 @@ export const SkillEditor = ({ type, hasRating = false }: { type: string; hasRati
 };
 
 export const SkillsEditor = () => (
-  <>
+  <div id="skills">
     <SkillEditor type="languages" hasRating />
     <SkillEditor type="frameworks" hasRating />
     <SkillEditor type="technologies" hasRating={false} />
@@ -207,5 +207,5 @@ export const SkillsEditor = () => (
     <SkillEditor type="databases" hasRating={false} />
     <SkillEditor type="practices" hasRating={false} />
     <SkillEditor type="tools" hasRating={false} />
-  </>
+  </div>
 );

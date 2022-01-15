@@ -68,7 +68,7 @@ export function Themes() {
 
   function getThemeItem(theme: any) {
     return (
-      <div key={theme.id}>
+      <div key={theme.id} id="theme">
         <Label>Preset {theme.id}</Label>
         <Item data-id={theme.id} onClick={onPreset}>
           <Color themeColor={theme.backgroundColor} />

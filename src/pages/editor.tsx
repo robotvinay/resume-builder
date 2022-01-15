@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Resume } from 'src/core/containers/Resume';
-import { Sidebar } from 'src/core/containers/Sidebar';
-import { LeftNav } from 'src/core/containers/LeftNav';
+import { LeftNav } from 'src/core/layout/LeftNav';
+import { RightNav } from 'src/core/layout/RightNav';
 import { FlexHC } from 'src/styles/styles';
 
 const Editor: NextPage = () => {
@@ -15,7 +15,7 @@ const Editor: NextPage = () => {
 
       <LeftNav />
       <Resume />
-      <Sidebar />
+      <RightNav />
     </FlexHC>
   );
 };
