@@ -12,13 +12,15 @@ import {
   MdEdit,
   MdColorLens,
   MdDragIndicator,
-  MdCloudDownload,
   MdLibraryBooks,
   MdAddCircleOutline,
   MdPeople,
   MdLabel,
   MdZoomOut,
   MdZoomIn,
+  MdSave,
+  MdCloudUpload,
+  MdPrint,
 } from 'react-icons/md';
 import {
   SiBehance,
@@ -69,7 +71,7 @@ const icons = new Map([
   ['skill', <GoVerified size="24" key="skill" />],
   ['edit', <MdEdit size="24" key="edit" />],
   ['color', <MdColorLens size="24" key="color" />],
-  ['download', <MdCloudDownload size="24" key="download" />],
+  ['print', <MdPrint size="24" key="download" />],
   ['template', <MdLibraryBooks size="24" key="template" />],
 
   ['drag', <MdDragIndicator color="#fff" size="16" key="drag" />],
@@ -80,6 +82,8 @@ const icons = new Map([
   ['awards', <FaAward size="24" key="awards" />],
   ['zoomin', <MdZoomIn key="zoomin" />],
   ['zoomout', <MdZoomOut key="zoomout" />],
+  ['save', <MdSave key="save" />],
+  ['upload', <MdCloudUpload key="upload" />],
 ]);
 
 export function getIcon(iconName: string) {
